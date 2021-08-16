@@ -1,7 +1,8 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
+require './lib/bookmark.rb'
 
-class Bookmark < Sinatra::Base
+class Manager < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
   end
@@ -9,5 +10,11 @@ class Bookmark < Sinatra::Base
   get '/' do
     "Hello, World!"
   end
+
+  get '/bookmarks' do 
+    @bookmark = Bookmark.all
+  
+    erb [:bookmark_bar]
+  end 
 
 end

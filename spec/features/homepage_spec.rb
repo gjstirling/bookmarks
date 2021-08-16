@@ -4,3 +4,10 @@ feature "Prints home page" do
     expect(page).to have_content "Hello, World!"
   end 
 end 
+
+feature "Display list of bookmarks" do 
+  scenario "makes get request to /bookmarks route" do 
+    visit "/bookmarks"
+    expect(page).to have_content "Google, Facebook, Youtube"
+  end 
+end 
