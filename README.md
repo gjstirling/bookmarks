@@ -14,7 +14,7 @@ Domain Model diagram
 
 ```
 +----------+          +-----------+
-|   Array  +--Print-->+ Bookmarks |
+|   User   +--Print-->+ Bookmarks |
 +----------+          +-----------+
 
 ```
