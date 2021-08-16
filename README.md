@@ -13,7 +13,4 @@ I need to to print a list of bookmarks
 Domain Model diagram
 ----------------------
 https://miro.com/app/board/o9J_l2U-ZSE=/
-```
-
-```
 
