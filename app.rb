@@ -1,6 +1,8 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
 require './lib/bookmark.rb'
+require 'pg'
+
 
 class Manager < Sinatra::Base
   configure :development do
