@@ -13,7 +13,6 @@ class Manager < Sinatra::Base
 
   get '/bookmarks' do 
     @bookmark = Bookmark.all
-  
     erb :bookmark_bar
   end 
   
