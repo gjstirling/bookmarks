@@ -13,7 +13,7 @@ class Manager < Sinatra::Base
     "Hello, World!"
   end
 
-  get '/bookmarks' do 
+  get '/bookmarks' do
     @bookmark = Bookmark.all
     erb :bookmark_bar
   end 
