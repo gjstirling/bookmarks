@@ -12,8 +12,17 @@ class Manager < Sinatra::Base
   get '/' do
     erb :index
   end
+ 
+  get "/create_bookmark" do
+    erb(:create_bookmark)
+  end
 
- get '/bookmarks' do
+  post '/add_bookmark' do
+ 
+    redirect('/bookmarks')
+  end
+
+  get '/bookmarks' do
     @bookmark = Bookmark.all
     erb :bookmark_bar
   end 
