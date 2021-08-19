@@ -10,10 +10,10 @@ class Manager < Sinatra::Base
   end
 
   get '/' do
-    "Hello, World!"
+    erb :index
   end
 
-  get '/bookmarks' do
+ get '/bookmarks' do
     @bookmark = Bookmark.all
     erb :bookmark_bar
   end 
