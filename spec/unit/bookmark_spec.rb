@@ -12,4 +12,12 @@ describe Bookmark do
     
   end
 
+  describe 'save_bookmark' do 
+    it "Saves a given url in bookmarks bar" do 
+      bookmark = Bookmark.new
+      bookmark.save_bookmark("http://www.facebook.com")
+      expect(Bookmark.all).to include("http://www.facebook.com")  
+    end 
+  end 
+
 end
