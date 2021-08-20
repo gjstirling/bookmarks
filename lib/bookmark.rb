@@ -16,13 +16,13 @@ class Bookmark
     end
   end
 
-  def save_bookmark(url)
+  def save_bookmark(url, title)
     if ENV['RACK_ENV'] == 'test'
       conn = PG.connect(dbname: 'bookmark_manager_test')
     else 
       conn = PG.connect(dbname: 'bookmark_manager')
     end
-    conn.exec ( "INSERT INTO bookmarks(url) VALUES('#{url}');" )
+    conn.exec ( "INSERT INTO bookmarks(url, title) VALUES('#{url}', '#{title}') RETURNING id, title, url;" )
   end
   
 end 
